@@ -266,7 +266,7 @@ class TestIn
   
   // </rtc-template>
 
-  ofstream fout;
+  std::ofstream fout;
 };
 
 
