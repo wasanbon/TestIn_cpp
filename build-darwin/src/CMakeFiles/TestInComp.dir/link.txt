@@ -1,0 +1,1 @@
+g++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/TestInComp.dir/TestInComp.cpp.o CMakeFiles/TestInComp.dir/TestIn.cpp.o  -o TestInComp  -L/usr/local/lib  -lomniORB4 -lomnithread -lomniDynamic4 -lRTC -lcoil 

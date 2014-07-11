@@ -1,0 +1,1 @@
+g++   -dynamiclib -Wl,-headerpad_max_install_names   -o TestIn.dylib -install_name /Users/ysuga/Development/rtm/wasanbon/workspace/test_project01/rtc/TestIn/build-darwin/src/TestIn.dylib CMakeFiles/TestIn.dir/TestIn.cpp.o  -L/usr/local/lib -lomniORB4 -lomnithread -lomniDynamic4 -lRTC -lcoil 
