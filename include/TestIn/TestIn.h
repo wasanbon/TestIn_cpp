@@ -272,7 +272,7 @@ class TestIn
 
 extern "C"
 {
-  DLL_EXPORT void TestInInit(RTC::Manager* manager);
+  DLL_EXPORT void TestIn_cppInit(RTC::Manager* manager);
 };
 
 #endif // TESTIN_H

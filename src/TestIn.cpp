@@ -13,8 +13,8 @@
 // <rtc-template block="module_spec">
 static const char* testin_spec[] =
   {
-    "implementation_id", "TestIn",
-    "type_name",         "TestIn",
+    "implementation_id", "TestIn_cpp",
+    "type_name",         "TestIn_cpp",
     "description",       "TestIn Component",
     "version",           "1.0.0",
     "vendor",            "VenderName",
@@ -160,7 +160,7 @@ RTC::ReturnCode_t TestIn::onRateChanged(RTC::UniqueId ec_id)
 extern "C"
 {
  
-  void TestInInit(RTC::Manager* manager)
+  void TestIn_cppInit(RTC::Manager* manager)
   {
     coil::Properties profile(testin_spec);
     manager->registerFactory(profile,
