@@ -7,7 +7,7 @@
  * $Id$
  */
 
-#include "TestIn.h"
+#include "TestIn_cpp.h"
 
 // Module specification
 // <rtc-template block="module_spec">

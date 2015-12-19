@@ -1,5 +1,5 @@
-set(comp_srcs TestIn.cpp )
-set(standalone_srcs TestInComp.cpp)
+set(comp_srcs TestIn_cpp.cpp )
+set(standalone_srcs TestIn_cppComp.cpp)
 
 if (DEFINED OPENRTM_INCLUDE_DIRS)
   string(REGEX REPLACE "-I" ";"
@@ -36,22 +36,22 @@ MAP_ADD_STR(comp_hdrs "../" comp_headers)
 link_directories(${OPENRTM_LIBRARY_DIRS})
 link_directories(${OMNIORB_LIBRARY_DIRS})
 
-add_library(${PROJECT_NAME}_cpp ${LIB_TYPE} ${comp_srcs}
+add_library(${PROJECT_NAME} ${LIB_TYPE} ${comp_srcs}
   ${comp_headers} ${ALL_IDL_SRCS})
-set_target_properties(${PROJECT_NAME}_cpp PROPERTIES PREFIX "")
+set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
 set_source_files_properties(${ALL_IDL_SRCS} PROPERTIES GENERATED 1)
-add_dependencies(${PROJECT_NAME}_cpp ALL_IDL_TGT)
-target_link_libraries(${PROJECT_NAME}_cpp ${OPENRTM_LIBRARIES})
+add_dependencies(${PROJECT_NAME} ALL_IDL_TGT)
+target_link_libraries(${PROJECT_NAME} ${OPENRTM_LIBRARIES})
 
 add_executable(${PROJECT_NAME}Comp ${standalone_srcs}
   ${comp_srcs} ${comp_headers} ${ALL_IDL_SRCS})
 target_link_libraries(${PROJECT_NAME}Comp ${OPENRTM_LIBRARIES})
 
-install(TARGETS ${PROJECT_NAME}_cpp ${PROJECT_NAME}Comp
-    EXPORT ${PROJECT_NAME}_cpp
+install(TARGETS ${PROJECT_NAME} ${PROJECT_NAME}Comp
+    EXPORT ${PROJECT_NAME}
     RUNTIME DESTINATION ${BIN_INSTALL_DIR} COMPONENT component
     LIBRARY DESTINATION ${LIB_INSTALL_DIR} COMPONENT component
     ARCHIVE DESTINATION ${LIB_INSTALL_DIR} COMPONENT component)
-install(EXPORT ${PROJECT_NAME}_cpp
+install(EXPORT ${PROJECT_NAME}
     DESTINATION ${LIB_INSTALL_DIR}/${PROJECT_NAME}
     FILE ${PROJECT_NAME}Depends.cmake)
