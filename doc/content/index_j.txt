@@ -1,4 +1,4 @@
-TestIn - 日本語
+﻿TestIn_cpp - 日本語
 =======================
 
 
@@ -13,9 +13,9 @@ TestIn - 日本語
 条件
 ====
 
-TestInはOpenRTM-aist 1.0.0以上のC++版が必要です。
+TestIn_cppはOpenRTM-aist 1.0.0以上のC++版が必要です。
 
-TestInは CMake_ を使います。CMake 2.8以上が必要です。
+TestIn_cppは CMake_ を使います。CMake 2.8以上が必要です。
 
 .. _CMAke:
    http://www.cmake.org
@@ -36,8 +36,8 @@ Windowsのユーザはインストーラパッケージを使用してコンポ�
 - 環境変数の変更を適用するため、コンポーネントを使用する前にコンピューターを
   再起動する必要があるかもしれません。
 
-TestInは ``TestInComp`` の実行をダブルクリックして実行することが
-できます。あるいは、 ``TestIn`` を初期化関数の ``TestInInit`` を利用して、
+TestIn_cppは ``TestIn_cppComp`` の実行をダブルクリックして実行することが
+できます。あるいは、 ``TestIn_cpp`` を初期化関数の ``TestIn_cppInit`` を利用して、
 マネージャにロードすることができます。
 
 ソースから
@@ -47,11 +47,11 @@ TestInは ``TestInComp`` の実行をダブルクリックして実行するこ�
 
 - ソースをダウンロードして解凍してください::
 
-    tar -xvzf TestIn-1.0.0.tar.gz
+    tar -xvzf TestIn_cpp-1.0.0.tar.gz
 
 - 解凍されたフォルダに入ってください::
 
-    cd TestIn-1.0.0
+    cd TestIn_cpp-1.0.0
 
 - ``build`` フォルダを作ってください::
 
@@ -82,9 +82,9 @@ TestInは ``TestInComp`` の実行をダブルクリックして実行するこ�
 ここまでで、コンポーネントが使えるようになりました。コンフィグレーションは次のセクションを
 参照してください。
 
-TestInは ``TestInComp`` を実行（ ``${prefix}/components/bin`` に
+TestIn_cppは ``TestIn_cppComp`` を実行（ ``${prefix}/components/bin`` に
 インストールされます）することでスタンドアローンモードで実行することができます。
-あるいは、 ``libTestIn.so`` を初期化関数の ``TestInInit`` を利用して、
+あるいは、 ``libTestIn_cpp.so`` を初期化関数の ``TestIn_cppInit`` を利用して、
 マネージャにロードすることができます。このライブラリは ``${prefix}/components/lib`` 
 または ``${prefix}/components/lib64`` にインストールされます。
 
@@ -114,7 +114,7 @@ in              InPort      RTC::TimedLong
 例
 ==
 
-例のrtc.confファイルは ``${prefix}/components/share/TestIn/examples/conf/``
+例のrtc.confファイルは ``${prefix}/components/share/TestIn_cpp/examples/conf/``
 フォルダにインストールされています。
 
 Changelog
